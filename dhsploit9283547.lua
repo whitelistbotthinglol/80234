@@ -21,27 +21,27 @@ local Tabs = {
 -- Groupbox and Tabbox inherit the same functions
 -- except Tabboxes you have to call the functions on a tab (Tabbox:AddTab(name))
 local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Main')
-LeftGroupBox:AddToggle('MyToggle', {
+LeftGroupBox:AddToggle('EspToggle', {
     Text = 'toggle esp',
     Default = false, -- Default value (true / false)
     Tooltip = 'meh', -- Information shown when you hover over the toggle
 })
 
-local MyButton = LeftGroupBox:AddButton({
+local SilentAimButton = LeftGroupBox:AddButton({
     Text = 'silent aim',
     Func = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/whitelistbotthinglol/3DfuTbH/main/dahoodsploit72349main.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/whitelistbotthinglol/80234/main/dahoodsploit72349main.lua"))()
     end,
     DoubleClick = false,
     Tooltip = 'dahood silent aim'
 })
 
-Library.KeybindFrame.Visible = false; -- todo: add a function for this
+Library.KeybindFrame.Visible = false;
 
 Library:OnUnload(function()
     --getgenv().enabled = true
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/whitelistbotthinglol/3DfuTbH/main/dahood8902350uninject.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/whitelistbotthinglol/80234/main/dahood8902350uninject.lua"))()
 
     --print('Unloaded!')
     Library.Unloaded = true
@@ -70,7 +70,7 @@ local function espload()
 end
 
 getgenv().enabled = true
-Toggles.MyToggle:OnChanged(function()
+Toggles.EspToggle:OnChanged(function()
     getgenv().enabled = not getgenv().enabled
     --loadstring(game:HttpGet("https://raw.githubusercontent.com/whitelistbotthinglol/3DfuTbH/main/dhsploit38759esp.lua"))()
     local success, result = pcall(espload)
