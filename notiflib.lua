@@ -1,5 +1,6 @@
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+screenGui.Name = "notiflib-" .. tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
 
 -- Function to create a notification
 local function createNotification(message, duration)
@@ -45,6 +46,3 @@ local function createNotification(message, duration)
         notificationFrame:Destroy()
     end)
 end
-
--- Example usage
---createNotification("This is a notification!", 5)
