@@ -11,7 +11,7 @@ end
 
 if holder.Name == "Folder" then
     holder.Name = "1ZtP5pjW"
-    holder.Parent = game.CoreGui
+    holder.Parent = game.Players.LocalPlayer.PlayerGui
 end
 
 if uselocalplayer == false and holder:FindFirstChild(game.Players.LocalPlayer.Name) then
